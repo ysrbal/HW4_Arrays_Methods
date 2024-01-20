@@ -16,20 +16,18 @@ public class Runner_Question_3 {
 
     public static int[][] multiplicationTable() {
         int[][] ints = new int[10][10];
-        for (int i = 1; i <= ints.length; i++) {
-            for (int j = 1; j <= ints[0].length; j++) {
-                ints[i - 1][j - 1] = i * j;
+        for (int i = 0; i < ints.length; i++) {
+            for (int j = 0; j < ints[i].length; j++) {
+                ints[i][j] = (i + 1) * (j + 1);
             }
         }
         return ints;
     }
 
     public static void print(int[][] ints) {
-        for (
-                int i = 0;
-                i < ints.length; i++) {
+        for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-                System.out.print((i + 1) + "x" + (j + 1) + "=" + ints[i][j] + "\t");
+                System.out.println((i + 1) + "x" + (j + 1) + "=" + ints[i][j] + "\t");
             }
             System.out.println();
         }
